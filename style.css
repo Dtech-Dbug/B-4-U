@@ -1,0 +1,61 @@
+html{
+    background-color: black;
+    background-image: url(/efe-kurnaz-RnCPiXixooY-unsplash.jpg);
+    background-size: 100% 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header p{
+   font-size: 26px;
+   background-color: white;
+}
+header p span{
+    color : crimson
+}
+
+.container{
+    height : 130vh;
+    width: 560px;
+    background-color:crimson;
+    text-align: center;
+    margin: 0 auto;
+}
+
+article{
+    display: flex;
+    line-height: 9px;
+    border: 2px solid white;
+    margin : 1rem 0;
+    padding: 0.3rem 1rem;
+
+    
+}
+article:hover{
+    border: 2px solid black;
+}
+
+article h3{
+   font-size: 10px;
+   margin: 0.3rem 0.3rem;
+   
+}
+article img{
+  height: 70px;
+  width: 70px;
+}
+article p{
+    font-size: 9px;
+    margin: 1rem 1rem;
+}
+
+.list{
+    padding: 0 2rem;
+    
+    margin: 0 2rem;
+
+    
+}
