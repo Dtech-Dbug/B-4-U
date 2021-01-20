@@ -47,7 +47,7 @@
         const searchQuery = document.getElementById('searchInput');
         const btn1 = document.getElementById('btn')
          const list = document.getElementById('playList')
-      var url =' https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&key=AIzaSyAjBM52Szy3TWZi-WoN48I8N5ZgZjn-1ng&'
+      var url =' https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&key=AIzaSyAjBM52Szy3TWZi-WoN48I8N5ZgZjn-1ng&q='
       //var testUrl ='https://www.youtube.com/results?search_query='
       function getUrl(input){
           return url + input
@@ -67,6 +67,7 @@
           fetch(getUrl(q))
           .then(response => response.json())
           .then(json => {
+            console.log(getUrl(q))
               var data = json
               console.log(data)
               console.log(data.items)
