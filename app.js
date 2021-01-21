@@ -1,6 +1,8 @@
 const searchQuery = document.getElementById('searchInput');
 const btn1 = document.getElementById('btn')
  const list = document.getElementById('playList')
+ const listItems = list.querySelectorAll('article')
+ console.log(listItems)
 var url =' https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&key=AIzaSyAjBM52Szy3TWZi-WoN48I8N5ZgZjn-1ng&q='
 //var testUrl ='https://www.youtube.com/results?search_query='
 function getUrl(input){
@@ -29,10 +31,11 @@ function clickHandler (){
       var thumb = json.items[1].snippet.thumbnails.medium.url
       console.log(vId)
       //console.log(thumb)
-      var newUrl = "https://youtube.com/embed/"+vId
+     /* var newUrl = "https://youtube.com/embed/"+vId
       var el = document.getElementById('ifrm')
       el.src= newUrl;
-      console.log("changed attr: " +el.src);
+      console.log("changed attr: " +el.src);*/
+      playVideo(data)
 
       resultLoop(data);
      
@@ -42,15 +45,35 @@ function clickHandler (){
 
   
 }
+function playVideo(json){
+    console.log('hello')
+    //var itemsList = data.items
+    vId = json.items[0].id.videoId
+   
+    console.log(vId)
+    //console.log(thumb)
+    var newUrl = "https://youtube.com/embed/"+vId
+    var el = document.getElementById('ifrm')
+    el.src= newUrl;
+    console.log("changed attr: " +el.src);
+    console.log('function : ' + vId)
+}
+
+
 function resultLoop(data){
  
- var itemsList = data.items
- Array.from(itemsList).forEach((item) => {
+ 
+  //var itemListArray = Array.from(itemsList)
+  //console.log('data array : ' + itemListArray)
+ Array.from(data.items).forEach((item ) => {
+
 
     // looping thru the items list obtained after a succesfull fetch call
     var thumb = item.snippet.thumbnails.medium.url
      var title = item.snippet.title
      var desc = item.snippet.description.substring(0,80)
+  var vIdTest = item.id.videoId
+ console.log(vIdTest)
     // console.log('thumb:' + thumb)
 //console.log('hello testing')
 
@@ -60,11 +83,14 @@ list.insertAdjacentHTML('afterbegin' , `<article>
       <div class="details" >
           <h3>${title}</h3>
           <p>${desc}</p>
+          <p> ${vIdTest} </p>
       </div>
     
      </article>`)
+     
 
  })
+ const listItems = list.querySelectorAll('article')
 
 /* var thumb = data.items[1].snippet.thumbnails.medium.url
 console.log('thumb:' + thumb)
@@ -130,3 +156,4 @@ player.stopVideo();
 }*/
 
 btn1.addEventListener('click' , clickHandler)   
+list.addEventListener('click' , playVideo())
