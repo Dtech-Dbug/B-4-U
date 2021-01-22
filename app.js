@@ -27,7 +27,7 @@ function clickHandler (){
       var data = json
       console.log(data)
       console.log(data.items)
-     /* vId = data.items[0].id.videoId
+      vId = data.items[0].id.videoId
       var thumb = json.items[1].snippet.thumbnails.medium.url
       console.log(vId)
       //console.log(thumb)
@@ -35,7 +35,7 @@ function clickHandler (){
       var el = document.getElementById('ifrm')
       el.src= newUrl;
       console.log("changed attr: " +el.src);
-      playFirstVideo(data)*/
+      //playFirstVideo(data)
 
       resultLoop(data);
      
@@ -85,14 +85,14 @@ function resultLoop(data){
      var title = item.snippet.title
      var desc = item.snippet.description.substring(0,80)
   var vIdTest = item.id.videoId
- //console.log(vIdTest)
+ console.log(vIdTest)
  
     // console.log('thumb:' + thumb)
 //console.log('hello testing')
 
 // appending the result list
-list.insertAdjacentHTML('afterbegin' ,
- `<article data-key ='${vIdTest}'>
+ var createdList = list.insertAdjacentHTML('afterbegin' ,
+ `<article id='article' data-key ='${vIdTest}'>
         <img src="${thumb}" id="thumbnail" style="width:100px; height:100px;" alt="" class="thumb">
       <div class="details" >
           <h3>${title}</h3>
@@ -114,13 +114,29 @@ list.insertAdjacentHTML('afterbegin' ,
         console.log('playvideofunction :' + vIdTest)
         alert('clicked' )
      }))*/
-     
+    
 
+   
  })
- /*list.addEventListener('click' ,  function(article){
-     var id = article.dataset.key
-     alert(id)
+
+ /*(list.querySelectorAll('article')).addEventListener('click' , function(article){
+     var id = article.data
+     console.log(event.target.data)
+     alert('id :' + id)
  })*/
+list.addEventListener('click' , function(e){
+    
+   // alert(e.target)
+    console.log(e.target)
+   
+    //console.log(id)
+    if(e.target && e.target.id == 'article'){
+        id =JSON.stringify( e.target.dataset.key)
+        alert(id)
+    }
+    
+})
+
 
  /*const listItems = list.querySelectorAll('article')
  listItems.forEach((article) => article.addEventListener('click' , function playVideo(data){
