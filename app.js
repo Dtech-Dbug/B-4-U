@@ -27,15 +27,15 @@ function clickHandler (){
       var data = json
       console.log(data)
       console.log(data.items)
-      vId = json.items[0].id.videoId
+     /* vId = data.items[0].id.videoId
       var thumb = json.items[1].snippet.thumbnails.medium.url
       console.log(vId)
       //console.log(thumb)
-     /* var newUrl = "https://youtube.com/embed/"+vId
+     var newUrl = "https://youtube.com/embed/"+vId
       var el = document.getElementById('ifrm')
       el.src= newUrl;
-      console.log("changed attr: " +el.src);*/
-      playVideo(data)
+      console.log("changed attr: " +el.src);
+      playFirstVideo(data)*/
 
       resultLoop(data);
      
@@ -45,7 +45,7 @@ function clickHandler (){
 
   
 }
-function playVideo(json){
+/*function playFirstVideo(json){
     console.log('hello')
     //var itemsList = data.items
     vId = json.items[0].id.videoId
@@ -58,6 +58,18 @@ function playVideo(json){
     console.log("changed attr: " +el.src);
     console.log('function : ' + vId)
 }
+
+function playVideo(data){
+    Array.from(data.items).forEach((item ) => {
+        var vIdTest = item.id.videoId 
+        var newUrl = "https://youtube.com/embed/"+vId
+        var el = document.getElementById('ifrm')
+        el.src= newUrl;
+        alert('clicked')
+     })
+}*/
+
+
 
 
 function resultLoop(data){
@@ -73,12 +85,14 @@ function resultLoop(data){
      var title = item.snippet.title
      var desc = item.snippet.description.substring(0,80)
   var vIdTest = item.id.videoId
- console.log(vIdTest)
+ //console.log(vIdTest)
+ 
     // console.log('thumb:' + thumb)
 //console.log('hello testing')
 
 // appending the result list
-list.insertAdjacentHTML('afterbegin' , `<article>
+list.insertAdjacentHTML('afterbegin' ,
+ `<article data-key ='${vIdTest}'>
         <img src="${thumb}" id="thumbnail" style="width:100px; height:100px;" alt="" class="thumb">
       <div class="details" >
           <h3>${title}</h3>
@@ -87,10 +101,40 @@ list.insertAdjacentHTML('afterbegin' , `<article>
       </div>
     
      </article>`)
+
+     //testing 
+     /*const listItems = list.querySelectorAll('article')
+ listItems.forEach((article , i) => article.addEventListener('click' , function playVideo(vIdTest){
+    
+        vIdTest= item.id.videoId
+         
+        var newUrl = "https://youtube.com/embed/"+vIdTest
+        var el = document.getElementById('ifrm')
+        el.src= newUrl;
+        console.log('playvideofunction :' + vIdTest)
+        alert('clicked' )
+     }))*/
      
 
  })
- const listItems = list.querySelectorAll('article')
+ /*list.addEventListener('click' ,  function(article){
+     var id = article.dataset.key
+     alert(id)
+ })*/
+
+ /*const listItems = list.querySelectorAll('article')
+ listItems.forEach((article) => article.addEventListener('click' , function playVideo(data){
+    Array.from(data.items).forEach((item ) => {
+        vIdTest = item.id.videoId
+         
+        var newUrl = "https://youtube.com/embed/"+vIdTest
+        var el = document.getElementById('ifrm')
+        el.src= newUrl;
+        console.log('playvideofunction :' + vIdTest)
+        alert('clicked')})
+     }))*/
+
+
 
 /* var thumb = data.items[1].snippet.thumbnails.medium.url
 console.log('thumb:' + thumb)
@@ -156,4 +200,4 @@ player.stopVideo();
 }*/
 
 btn1.addEventListener('click' , clickHandler)   
-list.addEventListener('click' , playVideo())
+//list.addEventListener('click' , playVideo())
