@@ -2,6 +2,7 @@ const searchQuery = document.getElementById('searchInput');
 const btn1 = document.getElementById('btn')
  const list = document.getElementById('playList')
  const listItems = list.querySelectorAll('article')
+ const play = document.querySelector('.play')
  console.log(listItems)
 var url =' https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&key=AIzaSyAjBM52Szy3TWZi-WoN48I8N5ZgZjn-1ng&q='
 //var testUrl ='https://www.youtube.com/results?search_query='
@@ -93,7 +94,7 @@ function resultLoop(data){
 // appending the result list
  var createdList = list.insertAdjacentHTML('afterbegin' ,
  `<article id='article' data-key ='${vIdTest}'>
-        <img src="${thumb}" id="thumbnail" style="width:100px; height:100px;" alt="" class="thumb">
+        <img  data-key ='${vIdTest}' src="${thumb}" id="thumbnail" style="width:100px; height:100px;" alt="" class="thumb">
       <div class="details" >
           <h3>${title}</h3>
           <p>${desc}</p>
@@ -130,9 +131,12 @@ list.addEventListener('click' , function(e){
     console.log(e.target)
    
     //console.log(id)
-    if(e.target && e.target.id == 'article'){
-        id =JSON.stringify( e.target.dataset.key)
-        alert(id)
+    if(e.target.id == 'thumbnail'){
+        id =( e.target.dataset.key)
+      
+       // alert(id)
+        console.log('clicked: ' + id)
+        playVideo(id);
     }
     
 })
@@ -166,6 +170,14 @@ var target = document.getElementById('thumbnail')
 
  
 };
+function playVideo(id){
+    console.log('hue: ' + id)
+    var newUrl = "https://youtube.com/embed/"+id
+    var el = document.getElementById('ifrm')
+    el.src= newUrl;
+}
+
+
 
 
 
