@@ -4,11 +4,22 @@ const btn1 = document.getElementById('btn')
  const listItems = list.querySelectorAll('article')
  const play = document.querySelector('.play')
  console.log(listItems)
+ const screenBtn = document.getElementById('screenBtn')
+ var el = document.getElementById('ifrm')
 var url =' https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=5&key=AIzaSyAjBM52Szy3TWZi-WoN48I8N5ZgZjn-1ng&q='
 //var testUrl ='https://www.youtube.com/results?search_query='
 function getUrl(input){
   return url + input
 }
+function showScreen(click){
+  
+ el.toggleAttribute('hidden')
+  
+ 
+
+  
+}
+
 
 function clickHandler (){
   console.log('hello')
@@ -227,5 +238,6 @@ function stopVideo() {
 player.stopVideo();
 }*/
 
-btn1.addEventListener('click' , clickHandler)   
+btn1.addEventListener('click' , clickHandler) 
+screenBtn.addEventListener('click' , showScreen)  
 //list.addEventListener('click' , playVideo())

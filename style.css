@@ -1,30 +1,124 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+/*font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Righteous', cursive;*/
+
 html{
     background-color: black;
     background-image: url(/efe-kurnaz-RnCPiXixooY-unsplash.jpg);
     background-size: 100% 100%;
+    object-fit: contain;
+     
+
+   
 }
+.container{
+    margin-top: 0;
+    
+}
+.container .headerIntro{
+    background-color: black;
+}
+
 
 body{
     margin: 0;
     padding: 0;
 }
+.headerIntro{
+    font-size: 26px;
+  background: -webkit-gradient(linear, left top, left bottom, from( rgb(156, 11, 71)), to(black));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  }
 
 header p{
    font-size: 26px;
    background-color: white;
+   font-family: 'Anton', sans-serif;
 }
-header p span{
-    color : crimson
+header h1{
+ 
+   color: white;
+}
+header .playerSpan{
+    background-color: rgb(135, 135, 135);
+    color: black;
+    margin-left: 3px;
+    padding: 0rem 0.3rem;
+}
+header .logoshadow{
+    background-color: black;
+    box-shadow: 3px 2.9px 6px rgb(156, 11, 71);
+    border: 6px solid black;
+    
+    
+}
+
+header p{
+    border: 2px solid black;
+    width: 90% ;
+    margin-left:3%;
+    box-shadow: 4px 9px 6px black;
+    font-family: 'Dancing Script', cursive;
+    background-color: black;
+    color: white;
 }
 
 .container{
     height : 130vh;
     width: 560px;
-    background-color:crimson;
+    background: linear-gradient(to bottom, rgb(104, 14, 156),rgb(29, 26, 31));
     text-align: center;
     margin: 0 auto;
+    
+    padding-bottom: 2rem;
 }
+.search input{
+ background-color: black;
+ color: white
+;
+}
+.search button{
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 3px 3px 9px black;
+}
+.slogan{
+    font-family: 'Anton', sans-serif;
+    display: flex; flex-direction: row; justify-content: center;
+    font-family: 'Righteous', cursive;
+    padding: 0 1rem;
+    border: 4px solid black;
+    margin: 1.3rem 1.3rem;
+    background: linear-gradient(to right , rgb(156, 11, 71) ,rgb(97, 32, 59));
+    
+}
+.slogan h3{
+    margin:  0.5rem;
+    color: black;
+    text-decoration: underline;
+   
+}
+.slogan img{
+    
+    border-radius: 50%;
+   
+    transform: translateY(-50px);
+    border-top:  6px solid  black;
 
+
+}
+#screenBtn{
+    border: 3px solid rgb(156, 11, 71) ;
+    background-color:black;
+    color:rgb(156, 11, 71) ;
+    margin-bottom: 1.5rem;
+}
 article{
     display: flex;
     line-height: 9px;

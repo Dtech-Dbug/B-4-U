@@ -3,24 +3,58 @@
     <head>
         <script src="https://www.youtube.com/iframe_api"></script>
         <link rel="stylesheet" href="style.css">
+        
+        <script src="https://kit.fontawesome.com/yourcode.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
     </head>
   <body>
-    <div class="container">
-        <header>
-            <h1>YT Player</h1>
     
-            <p>This is just a clone of youtube <span>[WORK IN PROGRESS]</span> </p>
+    <div class="container">
+      <header class="headerIntro">
+        <h1>YT Player</h1>
+      </header>
+      <div class="container">
+        <header>
+           <!--- <h1> <span class='logoshadow'> YT<span class="playerSpan"> Player</span></span> </h1>-->
+    
+            <p>This is made using javascript , and the youtube data API v3
+              <br><span style="color: rgb(156, 11, 71) ;">[WORK IN PROGRESS]</span>
+            <br>
+            Connect with the Developer
+            <br>
+            <i  style="background-color:black;"  class="fa fa-github"></i>
+            <br>
+              <i class="fa fa-twitter"></i>
+            
+
+            
+          
+              
         </header>
+       
     
         <div class="search" style="margin-bottom: 2rem;">
-            <input id="searchInput" type="text" placeholder="search by name" required  > 
+          🕵️‍♂️🕵️‍♀️<input id="searchInput" type="text" placeholder="search by name" required  > 
             <button id="btn" style="height: 1.3rem; margin-top: 0.3rem;">🔍</button>
         </div>
+
+        <div class="slogan" style="">
+          <h3>Watch the best in YouTube, ad free?</h3>
+
+          <div class="gif">
+            <img style="height: 130px;" src="https://media.giphy.com/media/fX8pPdMsl99JM981aH/giphy.gif" alt="">
+          </div>
+          
+        </div>
+        <button id="screenBtn"> Turn on/off screen</button>
     
            <div class="play">
-            <iframe src="https://youtube.com/embed/"  id="ifrm" frameborder="0" height="390" width="500"></iframe>
+            <iframe src="https://youtube.com/embed/"  id="ifrm" frameborder="0" height="390" width="500" hidden></iframe>
 
            </div>
+           
 
            <div class="list" id="playList">
             <!--<article>
