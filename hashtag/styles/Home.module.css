@@ -7,8 +7,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
 }
+
+/* ? HOME  SCREEN  */
+
 .splashScreen {
   margin-top: 40%;
   font-family: var(--logo-font);
@@ -47,6 +49,37 @@
   font-size: 1.5rem;
 }
 
+/*  ? CARD  */
+.cardContainer {
+  position: relative;
+  background-color: #222222;
+  height: var(--card-dimension);
+  width: 25vw;
+  border-radius: 0.74rem;
+  margin: 1rem 1rem;
+}
+.cardInfo {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+  color: crimson;
+}
+
+.cardGallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header {
+  font-family: var(--body-font);
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
 /* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
