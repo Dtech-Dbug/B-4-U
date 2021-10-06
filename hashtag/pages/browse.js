@@ -1,12 +1,17 @@
 import CARD from "../Components/Ui-Elements/CARD";
+import styles from "../styles/Home.module.css";
 
-function tf() {
+function browse() {
   return (
     <>
-      <CARD info="Education" />
-      <CARD info="Entertainment" />
+      <div className={styles.cardGallery}>
+        <CARD info=" Education" />
+        <CARD info="Entertainment" />
+        <CARD info="Sports" />
+        <CARD info="Comedy" />
+      </div>
     </>
   );
 }
 
-export default tf;
+export default browse;
