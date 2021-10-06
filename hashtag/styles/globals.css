@@ -1,7 +1,29 @@
-html,
-body {
+@import url("https://fonts.googleapis.com/css2?family=Akronim&display=swap");
+/* font-family: 'Akronim', cursive; */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+/* font-family:'Ubuntu", sans-serif  */
+@import url("https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap");
+/* font-family: 'Gemunu Libre', sans-serif; */
+
+:root {
+  --home-font: "Akronim", cursive;
+  --body-font: "Ubuntu", sans-serif;
+  --logo-font: "Gemunu Libre", sans-serif;
+  --card-dimension: 25vh;
+}
+
+* {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html,
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: black;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -9,10 +31,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
