@@ -1,10 +1,13 @@
 import styles from "../../styles/Home.module.css";
+import ICON from "../Icons/awards.png";
+import test from "../../public/vercel.svg";
 
-function CARD() {
+function CARD({ info }) {
   return (
     <>
       <div className={styles.cardContainer}>
-        <h3 className={styles.cardInfo}>Education</h3>
+        {/* <img src="" height={150} width={150} alt="oop" /> */}
+        <h3 className={styles.cardInfo}>{info}</h3>
       </div>
     </>
   );
