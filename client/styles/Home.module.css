@@ -77,7 +77,7 @@
 }
 
 .infoAnimation {
-  animation: letterAnimation 5s infinite;
+  animation: letterAnimation 5s ease-in-out infinite;
 }
 
 .cardVideoQualityListDiv {
