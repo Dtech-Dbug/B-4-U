@@ -29,8 +29,12 @@ function CARD({ data, link, formats }) {
           <div className={styles.cardVideoQualityListDiv}>
             <select className={styles.selectListMenu} name="cars" id="cars">
               {formats &&
-                formats.map((data) => {
-                  return <option value="volvo">{data.qualityLabel}</option>;
+                formats.map((data, index) => {
+                  return (
+                    <option key={index} value="volvo">
+                      {data.qualityLabel}
+                    </option>
+                  );
                 })}
             </select>
           </div>
