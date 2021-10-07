@@ -29,26 +29,6 @@
   color: transparent;
 }
 
-.buttonWrapper {
-  /* position: absolute; */
-  padding: 1rem;
-  background: linear-gradient(to right, rgb(165, 2, 2), crimson);
-  padding: 3px;
-  width: 9.4rem;
-  border-radius: 0.75rem;
-  box-shadow: 2px 2px 2px crimson;
-}
-
-.wrappedContent {
-  background: black;
-  color: white;
-  padding: 2rem;
-  width: 9rem;
-  border-radius: 0.75rem;
-  font-family: var(--body-font);
-  font-size: 1.5rem;
-}
-
 /*  ? CARD  */
 .cardContainer {
   position: relative;
@@ -137,4 +117,31 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+/*  ?? search bar */
+
+.searchInput {
+  height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  margin-left: -0.5rem;
+  background: #151515;
+  border-radius: 5rem;
+}
+.searchInput > input {
+  border: none;
+  outline: none;
+  background: #151515;
+  flex: 1;
+  margin: 0 0.3rem;
+  color: #fcfcfc;
+  font-family: var(--text-medium);
+}
+.searchInput > i {
+  color: #868686;
+  width: 14.5px;
+  height: 13px;
 }
