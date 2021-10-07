@@ -13,7 +13,7 @@ function CARD({ data, link, formats }) {
           src={link}
           frameborder="0"
         ></iframe>
-        <div className={styles.cardVideoQualityList}>
+        <div className={styles.cardVideoQualityListDiv}>
           <select name="cars" id="cars">
             {formats &&
               formats.map((data) => {
