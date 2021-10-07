@@ -8,11 +8,16 @@ function browse() {
         <h3 className={styles.header}>get #browsing!</h3>
       </header>
 
-      <div className={styles.cardGallery}>
+      {/* <div className={styles.cardGallery}>
         <CARD info=" Education" />
         <CARD info="Entertainment" />
         <CARD info="Sports" />
         <CARD info="Comedy" />
+      </div> */}
+
+      <div className="state-search-input">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search Your State here"></input>
       </div>
     </>
   );
