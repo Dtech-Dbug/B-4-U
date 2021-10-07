@@ -29,6 +29,27 @@
   color: transparent;
 }
 
+/* ?? BUTTON COMPONENT */
+.buttonWrapper {
+  /* position: absolute; */
+  padding: 1rem;
+  background: linear-gradient(to right, rgb(165, 2, 2), crimson);
+  padding: 3px;
+  width: 9.4rem;
+  border-radius: 0.75rem;
+  box-shadow: 2px 2px 2px crimson;
+}
+
+.wrappedContent {
+  background: black;
+  color: white;
+  padding: 2rem;
+  width: 9rem;
+  border-radius: 0.75rem;
+  font-family: var(--body-font);
+  font-size: 1.5rem;
+}
+
 /*  ? CARD  */
 .cardContainer {
   position: relative;
@@ -130,6 +151,8 @@
   margin-left: -0.5rem;
   background: #151515;
   border-radius: 5rem;
+  animation: searchIconAnimation 5s infinite;
+  /* box-shadow: 2px 2px 2px red; */
 }
 .searchInput > input {
   border: none;
@@ -140,8 +163,32 @@
   color: #fcfcfc;
   font-family: var(--text-medium);
 }
-.searchInput > i {
+.searchICon {
   color: #868686;
   width: 14.5px;
   height: 13px;
+}
+
+/* !! Search Icon ANimation */
+
+@keyframes searchIconAnimation {
+  0% {
+    color: crimson;
+    /* box-shadow: 2px 2px 2px wheat; */
+  }
+
+  25% {
+    color: rgb(165, 2, 2);
+  }
+
+  50% {
+    color: rgba(130, 7, 28, 0.857);
+  }
+  75% {
+    color: rgba(36, 3, 76, 0.857);
+  }
+
+  100% {
+    color: rgba(204, 70, 7, 0.857);
+  }
 }
