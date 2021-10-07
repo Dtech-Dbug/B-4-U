@@ -14,7 +14,7 @@ function CARD({ data, link, formats }) {
           frameborder="0"
         ></iframe>
         <div className={styles.cardVideoQualityListDiv}>
-          <select name="cars" id="cars">
+          <select className={styles.selectListMenu} name="cars" id="cars">
             {formats &&
               formats.map((data) => {
                 return <option value="volvo">{data.qualityLabel}</option>;

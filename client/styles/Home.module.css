@@ -78,6 +78,14 @@
 .cardVideoQualityListDiv {
   padding-left: 0.5rem;
 }
+
+.selectListMenu {
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.75rem;
+  animation: dropDownAnimation 5s infinite;
+  color: white;
+  font-family: var(--body-font);
+}
 .cardGallery {
   display: flex;
   flex-direction: row;
@@ -169,5 +177,27 @@
 
   100% {
     color: rgba(204, 70, 7, 0.857);
+  }
+}
+
+@keyframes dropDownAnimation {
+  0% {
+    background-color: crimson;
+    /* box-shadow: 2px 2px 2px wheat; */
+  }
+
+  25% {
+    background-color: rgb(165, 2, 2);
+  }
+
+  50% {
+    background-color: rgba(130, 7, 28, 0.857);
+  }
+  75% {
+    background-color: rgba(36, 3, 76, 0.857);
+  }
+
+  100% {
+    background-color: rgba(204, 70, 7, 0.857);
   }
 }
