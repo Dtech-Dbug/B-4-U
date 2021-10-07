@@ -61,8 +61,8 @@
 }
 
 .cardVideo {
-  height: 6rem;
-  width: 6rem;
+  height: 12rem;
+  width: 12rem;
 }
 .cardInfo {
   font-family: var(--body-font);
