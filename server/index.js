@@ -22,13 +22,24 @@ ytdl("http://www.youtube.com/watch?v=aqz-KE-bpKQ").pipe(
 //   console.log(video);
 // });
 
-app.get("/download", async (req, res) => {
+app.get("/videoInfo", async (req, res) => {
   console.log(res);
 
-  const video = ytdl.getInfo("http://www.youtube.com/watch?v=aqz-KE-bpKQ");
-  console.log(video);
-  video.then((res) => console.table(res));
-  res.json(video);
+  console.log(req.query.videoURL);
+
+  videoURL = req.query.videoURL;
+
+  const videoInfo = await ytdl.getInfo(videoURL);
+  //   console.log(video);
+  //   video.then((info) => {
+  //     console.table("inf0--->i", info);
+
+  //     // res.json(res);
+  //   });
+
+  //   video.then((res) => res.json(res));
+
+  res.status(200).send(videoInfo);
 });
 
 app.listen("8000", () => {
