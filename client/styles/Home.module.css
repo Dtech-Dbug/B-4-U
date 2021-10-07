@@ -75,6 +75,9 @@
   color: crimson;
 }
 
+.cardVideoQualityList {
+  padding-left: 0.5rem;
+}
 .cardGallery {
   display: flex;
   flex-direction: row;
