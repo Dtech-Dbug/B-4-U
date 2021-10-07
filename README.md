@@ -1,5 +1,13 @@
 ### Youtube Video Downloader 📸🕹
 
+##### Table of Contents  
+| stacks 🤖| 
+| :---: | 
+| guide to contribution �🗺 | 
+| picture preview 🖼| 
+| in-action 📽| 
+
+
 **Stacks used :**
 - NextJs
 - CSS
