@@ -7,11 +7,13 @@ import { useEffect, useState } from "react";
 function browse() {
   const [videoInfo, setVideoInfo] = useState([]);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  let host = "http://localhost:8000/";
-  useEffect(() => {
-    fetch(
-      host + "videoInfo?videoURL=http://www.youtube.com/watch?v=aqz-KE-bpKQ"
-    )
+  const [query, setQuery] = useState("");
+
+  const fetchData = (e) => {
+    e.preventDefault();
+    let host = "http://localhost:8000/";
+    console.log(host + "videoInfo?videoURL=" + query);
+    fetch(host + "videoInfo?videoURL=" + query)
       .then((res) => res.json())
       .then((data) => {
         setVideoLoaded(false);
@@ -26,8 +28,8 @@ function browse() {
           console.log("Error while fetching", err.message);
         }
       });
-  }, []);
-  const icon = () => <FaSearch />;
+  };
+
   return (
     <>
       <header className={styles.headerContainer}>
@@ -37,8 +39,16 @@ function browse() {
       {/* {console.log("load state", loading)} */}
 
       <div className={styles.searchInput}>
-        <FaSearch className={styles.searchIcon} />
-        <input type="text" placeholder="Search Your State here"></input>
+        <form className={styles.searchInput} onSubmit={fetchData}>
+          <FaSearch className={styles.searchIcon} />
+          <input
+            onChange={(e) => {
+              setQuery(e.target.value);
+            }}
+            type="text"
+            placeholder="Search Your State here"
+          ></input>
+        </form>
       </div>
 
       <div className={styles.cardGallery}>
