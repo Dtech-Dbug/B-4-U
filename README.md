@@ -12,7 +12,7 @@
 - NextJs
 - CSS
 - Node/Express
-- ytdl-core module for handling video encoding and getting info
+- ytdl-core module for handling video encoding and getting info. [docs for the ytdl-core api](https://npmdoc.github.io/node-npmdoc-ytdl-core/build/apidoc)
 - Node inbuilt ``` fs ``` module for writing encoded video data in a specified format
 
 #### 🗺 guide to contribution :
