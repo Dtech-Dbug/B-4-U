@@ -13,12 +13,14 @@ function CARD({ data, link, formats }) {
           src={link}
           frameborder="0"
         ></iframe>
-        <select name="cars" id="cars">
-          {formats &&
-            formats.map((data) => {
-              return <option value="volvo">{data.qualityLabel}</option>;
-            })}
-        </select>
+        <div className={styles.cardVideoQualityList}>
+          <select name="cars" id="cars">
+            {formats &&
+              formats.map((data) => {
+                return <option value="volvo">{data.qualityLabel}</option>;
+              })}
+          </select>
+        </div>
 
         <h3 className={styles.cardInfo}>h</h3>
       </div>
