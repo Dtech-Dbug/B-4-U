@@ -1,6 +1,7 @@
 import styles from "../../styles/Home.module.css";
 import ICON from "../Icons/awards.png";
 import test from "../../public/vercel.svg";
+import { BsCloudDownloadFill } from "react-icons/bs";
 
 function CARD({ data, link, formats }) {
   return (
@@ -20,6 +21,12 @@ function CARD({ data, link, formats }) {
                 return <option value="volvo">{data.qualityLabel}</option>;
               })}
           </select>
+        </div>
+
+        <div className={styles.cardVideoQualityListDiv}>
+          <button className={styles.downloadBtn}>
+            Download <BsCloudDownloadFill />
+          </button>
         </div>
 
         <h3 className={styles.cardInfo}>h</h3>

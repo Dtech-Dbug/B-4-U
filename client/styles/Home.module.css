@@ -92,6 +92,15 @@
   flex-wrap: wrap;
 }
 
+.downloadBtn {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.75rem;
+  animation: dropDownAnimation 5s infinite;
+  color: white;
+  font-family: var(--body-font);
+}
+
 .header {
   font-family: var(--body-font);
   font-size: 1.5rem;
