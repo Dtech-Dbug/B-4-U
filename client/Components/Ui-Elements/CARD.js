@@ -15,19 +15,21 @@ function CARD({ data, link, formats }) {
           frameborder="0"
         ></iframe>
 
-        <div className={styles.cardVideoQualityListDiv}>
-          <select className={styles.selectListMenu} name="cars" id="cars">
-            {formats &&
-              formats.map((data) => {
-                return <option value="volvo">{data.qualityLabel}</option>;
-              })}
-          </select>
-        </div>
+        <div className={styles.actions}>
+          <div className={styles.cardVideoQualityListDiv}>
+            <select className={styles.selectListMenu} name="cars" id="cars">
+              {formats &&
+                formats.map((data) => {
+                  return <option value="volvo">{data.qualityLabel}</option>;
+                })}
+            </select>
+          </div>
 
-        <div className={styles.cardVideoQualityListDiv}>
-          <button className={styles.downloadBtn}>
-            Download <BsCloudDownloadFill />
-          </button>
+          <div className={styles.cardVideoQualityListDiv}>
+            <button className={styles.downloadBtn}>
+              Download <BsCloudDownloadFill />
+            </button>
+          </div>
         </div>
 
         <h3 className={styles.cardInfo}>{data.videoDetails.category}</h3>

@@ -68,10 +68,9 @@
 .cardInfo {
   font-family: var(--body-font);
   font-size: 0.6rem;
-  /* color: white; */
-  /* position: absolute; */
   color: crimson;
   padding-left: 0.5rem;
+  margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -86,6 +85,11 @@
   color: white;
   font-family: var(--body-font);
 }
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 .cardGallery {
   display: flex;
   flex-direction: row;
@@ -93,7 +97,6 @@
 }
 
 .downloadBtn {
-  margin-top: 0.5rem;
   padding: 0.5rem 0.5rem;
   border-radius: 0.75rem;
   animation: dropDownAnimation 5s infinite;
