@@ -31,23 +31,33 @@
 
 /* ?? BUTTON COMPONENT */
 .buttonWrapper {
-  /* position: absolute; */
   padding: 1rem;
   background: linear-gradient(to right, rgb(165, 2, 2), crimson);
   padding: 3px;
   width: 9.4rem;
+  height: 4.4rem;
   border-radius: 0.75rem;
   box-shadow: 2px 2px 2px crimson;
 }
 
 .wrappedContent {
+  position: relative;
   background: black;
   color: white;
   padding: 2rem;
   width: 9rem;
+  height: 4rem;
   border-radius: 0.75rem;
   font-family: var(--body-font);
   font-size: 1.5rem;
+}
+
+.btnTextContent {
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  bottom: 40%;
+  left: 30%;
 }
 
 /*  ? CARD  */

@@ -3,7 +3,9 @@ function BUTTON() {
   return (
     <>
       <div className={styles.buttonWrapper}>
-        <button className={styles.wrappedContent}>Start</button>
+        <button className={styles.wrappedContent}>
+          <p className={styles.btnTextContent}>Start</p>
+        </button>
       </div>
     </>
   );
