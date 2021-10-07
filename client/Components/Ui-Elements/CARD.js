@@ -14,6 +14,7 @@ function CARD({ data, link, formats }) {
           src={link}
           frameborder="0"
         ></iframe>
+
         <div className={styles.cardVideoQualityListDiv}>
           <select className={styles.selectListMenu} name="cars" id="cars">
             {formats &&
@@ -29,7 +30,8 @@ function CARD({ data, link, formats }) {
           </button>
         </div>
 
-        <h3 className={styles.cardInfo}>h</h3>
+        <h3 className={styles.cardInfo}>{data.videoDetails.category}</h3>
+        <h3 className={styles.cardInfo}>{data.videoDetails.title}</h3>
       </div>
     </>
   );
