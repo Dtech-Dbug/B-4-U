@@ -2,7 +2,7 @@ import styles from "../../styles/Home.module.css";
 import ICON from "../Icons/awards.png";
 import test from "../../public/vercel.svg";
 
-function CARD({ data, link }) {
+function CARD({ data, link, formats }) {
   return (
     <>
       {console.log("LINK", data)}
@@ -13,6 +13,13 @@ function CARD({ data, link }) {
           src={link}
           frameborder="0"
         ></iframe>
+        <select name="cars" id="cars">
+          {formats &&
+            formats.map((data) => {
+              return <option value="volvo">{data.qualityLabel}</option>;
+            })}
+        </select>
+
         <h3 className={styles.cardInfo}>h</h3>
       </div>
     </>
