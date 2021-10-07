@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 function browse() {
   return (
     <>
-      <header>
+      <header className={styles.headerContainer}>
         <h3 className={styles.header}>get #browsing!</h3>
       </header>
 

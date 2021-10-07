@@ -9,7 +9,7 @@
   --home-font: "Akronim", cursive;
   --body-font: "Ubuntu", sans-serif;
   --logo-font: "Gemunu Libre", sans-serif;
-  --card-dimension: 25vh;
+  --card-dimension: 12rem;
 }
 
 * {

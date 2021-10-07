@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import tf from "./tf";
+import browse from "./browse";
 import Link from "next/link";
 
 //uis
@@ -24,7 +24,7 @@ export default function Home() {
           <header className={styles.logo}>
             <h1># hashtag</h1>
           </header>
-          <Link href="/tf">
+          <Link href="/browse">
             <a href="">
               <BUTTON />
             </a>
