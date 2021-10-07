@@ -3,19 +3,19 @@
 ##### table of contents  
 | stacks 🤖| 
 | :---: | 
-| guide to contribution �🗺 | 
+| guide to contribution 🗺 | 
 | picture preview 🖼| 
 | in-action 📽| 
 
 
-#### stacks used :
+#### 🤖 stacks used :
 - NextJs
 - CSS
 - Node/Express
 - ytdl-core module for handling video encoding and getting info
 - Node inbuilt ``` fs ``` module for writing encoded video data in a specified format
 
-#### guide to contribution :
+#### 🗺 guide to contribution :
 - fork the repository 🍴
 - preferrably create a seperate branch & clone it on your local machine 🤖
 - run ```npm i ``` to install all the project dependancies and spin up the dev server on your machine to preview the running application 🏃‍♂️💨
