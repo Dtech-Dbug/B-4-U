@@ -15,6 +15,16 @@ function CARD({ data, link, formats }) {
           frameborder="0"
         ></iframe>
 
+        <figcaption>
+          <h3 className={styles.cardInfo}>
+            CATEGORY :{" "}
+            <span className={styles.infoAnimation}>
+              {data.videoDetails.category}
+            </span>
+          </h3>
+          <h3 className={styles.cardInfo}>TITLE : {data.videoDetails.title}</h3>
+        </figcaption>
+
         <div className={styles.actions}>
           <div className={styles.cardVideoQualityListDiv}>
             <select className={styles.selectListMenu} name="cars" id="cars">
@@ -31,9 +41,6 @@ function CARD({ data, link, formats }) {
             </button>
           </div>
         </div>
-
-        <h3 className={styles.cardInfo}>{data.videoDetails.category}</h3>
-        <h3 className={styles.cardInfo}>{data.videoDetails.title}</h3>
       </div>
     </>
   );

@@ -72,6 +72,12 @@
   padding-left: 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  /* word-spacing: 9px; */
+  /* letter-spacing: 3px; */
+}
+
+.infoAnimation {
+  animation: letterAnimation 5s infinite;
 }
 
 .cardVideoQualityListDiv {
@@ -168,7 +174,7 @@
   height: 13px;
 }
 
-/* !! Search Icon ANimation */
+/* !!  ANimations */
 
 @keyframes searchIconAnimation {
   0% {
@@ -211,5 +217,26 @@
 
   100% {
     background-color: rgba(204, 70, 7, 0.857);
+  }
+}
+
+@keyframes letterAnimation {
+  0% {
+    letter-spacing: 2px;
+  }
+
+  25% {
+    letter-spacing: 4px;
+  }
+
+  50% {
+    letter-spacing: 8px;
+  }
+  75% {
+    letter-spacing: 4px;
+  }
+
+  100% {
+    letter-spacing: 2px;
   }
 }
