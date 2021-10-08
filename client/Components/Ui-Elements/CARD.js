@@ -12,7 +12,7 @@ function CARD({ data, link, formats }) {
         <iframe
           className={styles.cardVideo}
           src={link}
-          frameborder="0"
+          frameBorder="0"
         ></iframe>
 
         <figcaption>

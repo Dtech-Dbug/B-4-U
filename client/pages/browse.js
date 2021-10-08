@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import { FcSearch } from "react-icons/fc";
 import { useEffect, useState } from "react";
 
-function browse() {
+function Browse() {
   const [videoInfo, setVideoInfo] = useState([]);
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [query, setQuery] = useState("");
@@ -70,4 +70,4 @@ function browse() {
   );
 }
 
-export default browse;
+export default Browse;
