@@ -3,7 +3,7 @@ import ICON from "../Icons/awards.png";
 import test from "../../public/vercel.svg";
 import { BsCloudDownloadFill } from "react-icons/bs";
 
-function CARD({ data, link, formats }) {
+function CARD({ data, link, formats, handleDownload }) {
   return (
     <>
       {console.log("LINK", data)}
@@ -40,7 +40,7 @@ function CARD({ data, link, formats }) {
           </div>
 
           <div className={styles.cardVideoQualityListDiv}>
-            <button className={styles.downloadBtn}>
+            <button onClick={handleDownload} className={styles.downloadBtn}>
               Download <BsCloudDownloadFill />
             </button>
           </div>

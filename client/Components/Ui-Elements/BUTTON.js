@@ -1,8 +1,11 @@
 import styles from "../../styles/Home.module.css";
-function BUTTON() {
+function BUTTON({ handleDownload }) {
   return (
     <>
-      <div className={styles.buttonWrapper}>
+      <div
+        onClick={(e) => console.log(e.target)}
+        className={styles.buttonWrapper}
+      >
         <button className={styles.wrappedContent}>
           <p className={styles.btnTextContent}>Start</p>
         </button>

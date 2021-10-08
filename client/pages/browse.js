@@ -9,11 +9,32 @@ function Browse() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [query, setQuery] = useState("");
 
+  let host = "http://localhost:8000/";
+
   const fetchData = (e) => {
     e.preventDefault();
-    let host = "http://localhost:8000/";
     console.log(host + "videoInfo?videoURL=" + query);
     fetch(host + "videoInfo?videoURL=" + query)
+      .then((res) => res.json())
+      .then((data) => {
+        setVideoLoaded(false);
+        console.log("read", data);
+        console.log("link", data.videoDetails.embed.iframeUrl);
+        setVideoInfo(data);
+        setVideoLoaded(true);
+        // videoInfo.push(data);
+      })
+      .catch((err) => {
+        {
+          console.log("Error while fetching", err.message);
+        }
+      });
+  };
+
+  const handleDownload = () => {
+    console.log("hello");
+    console.log("QRy:", query);
+    fetch(host + "download?videoURL=" + query)
       .then((res) => res.json())
       .then((data) => {
         setVideoLoaded(false);
@@ -54,6 +75,7 @@ function Browse() {
       <div className={styles.cardGallery}>
         {videoLoaded && (
           <CARD
+            handleDownload={handleDownload}
             data={videoInfo}
             link={videoInfo.videoDetails.embed.iframeUrl}
             formats={videoInfo.formats}
