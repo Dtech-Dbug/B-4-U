@@ -12,7 +12,7 @@
 
 - NextJs
 - CSS
-- Node/Express
+- Node/Express : refer to the backend codes [here 🕸](https://github.com/Dtech-Dbug/downloaderModule/tree/master)
 - ytdl-core module for handling video encoding and getting info. [docs for the ytdl-core api](https://npmdoc.github.io/node-npmdoc-ytdl-core/build/apidoc)
 - Node inbuilt `fs` module for writing encoded video data in a specified format
 
@@ -23,6 +23,8 @@
 - run `npm i ` to install all the project dependancies and spin up the dev server on your machine to preview the running application 🏃‍♂️💨
 - make some changes. commit them to your branch 🦕
 - create a pull request and wait till it is reviewe and merged 🎠
+- the server files and details about the endpoints are [here 🕸](https://github.com/Dtech-Dbug/downloaderModule/tree/master)
+ 
 
 #### 🖼 preview :
 
