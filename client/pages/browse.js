@@ -9,7 +9,7 @@ function Browse() {
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [query, setQuery] = useState("");
 
-  let host = "https://downloadmodule.herokuapp.com/";
+  let host = "https://downloadmodule.herokuapp.com/api";
 
   const fetchData = (e) => {
     e.preventDefault();
