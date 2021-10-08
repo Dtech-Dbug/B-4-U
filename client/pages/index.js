@@ -22,7 +22,7 @@ export default function Home() {
           </Head>
 
           <header className={styles.logo}>
-            <h1># geeks</h1>
+            <h1># b4u</h1>
           </header>
           <Link href="/browse">
             <a href="">
