@@ -46,7 +46,7 @@ function Browse() {
               setQuery(e.target.value);
             }}
             type="text"
-            placeholder="Search Your State here"
+            placeholder="Paste the link here "
           ></input>
         </form>
       </div>
