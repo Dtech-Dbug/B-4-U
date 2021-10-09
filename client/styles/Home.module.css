@@ -160,9 +160,6 @@
 .searchInput {
   height: 3rem;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 1.5rem 1rem;
   margin-left: -0.5rem;
   background: #151515;
   border-radius: 5rem;
@@ -170,7 +167,15 @@
   /* box-shadow: 2px 2px 2px red; */
   margin-inline: 1rem;
 }
-.searchInput > input {
+
+.searchInput > form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-left: 3rem;
+}
+.searchInput > form > input {
   border: none;
   outline: none;
   background: #151515;

@@ -60,7 +60,7 @@ function Browse() {
       {/* {console.log("load state", loading)} */}
 
       <div className={styles.searchInput}>
-        <form className={styles.searchInput} onSubmit={fetchData}>
+        <form onSubmit={fetchData}>
           <FaSearch className={styles.searchIcon} />
           <input
             onChange={(e) => {
